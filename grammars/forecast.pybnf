@@ -1,0 +1,29 @@
+<model> ::= <lm> | <lm><nm> | <nm>
+
+<lm> ::= 'lm:' <lm_options>'; '
+<nm> ::= 'nm:' <nm_options>'; '
+<lm_options> ::= 'ar' | <arima> | <sarima> | 'ses' | 'hwes'
+<nm_options> ::= <mlp> | <svr>
+
+<arima> ::= 'arima' <order>
+<sarima> ::= 'sarima' <order> <seasonal_order> <trend>
+
+<order> ::= (<p_values>,<d_values>,<q_values>)
+<seasonal_order> ::= (<p_values>,<d_values>,<q_values>,<m_values>)
+<p_values> ::= 0 | 1 | 2
+<d_values> ::= 0 | 1 | 2 | 3
+<q_values> ::= 0 | 1 | 2 | 3
+<m_values> ::= 0 | 6 | 12
+<trend> ::= 'n' | 'c' | 't' | 'ct'
+
+<mlp> ::= 'mlp' (<hidden_layer_sizes>,<activation>,<solver>,<learning_rate>)
+<svr> ::= 'svr' (<kernel>,<C>,<gamma>,<epsilon>)
+
+<hidden_layer_sizes> ::= 2 | 5 | 10 | 15 | 20
+<activation> ::= '"logistic"' | '"relu"' | '"identity"' | '"tanh"'
+<solver> ::= '"lbfgs"' | '"adam"' | '"sgd"'
+<learning_rate> ::= '"constant"' | '"invscaling"' | '"adaptive"'
+<kernel> ::= '"rbf"' | '"sigmoid"'
+<C> ::= 0.1 | 1 | 100 | 1000 | 10000
+<gamma> ::= 1 | 0.1 | 0.01 | 0.001
+<epsilon> ::= 0.1 | 0.01 | 0.001

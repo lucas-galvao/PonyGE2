@@ -1,0 +1,9 @@
+<final_exp> ::= <exp_2><fc>
+<exp_2>     ::= (<exp_1>*<m>)
+<exp_1>     ::= (<conv><pool>)
+<fc>        ::= fc*<k>
+<pool>      ::= pool | ''
+<conv>      ::= (conv*<n>)
+<n>         ::= 1 | 2 | 3
+<k>         ::= 0 | 1 | 2
+<m>         ::= 1 | 2 | 3

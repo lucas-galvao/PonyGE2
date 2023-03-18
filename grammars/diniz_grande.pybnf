@@ -1,0 +1,17 @@
+<network-arquiteture>   ::= <pre-features> <pre-classification> (<softmax>) (<learning>)
+<pre-features>          ::= <features> | <features><features> | <features><features><features> | <features><features><features><features>
+<features>              ::= (<convolution>) (<pooling>) | (<convolution>)
+<convolution>           ::= layer:conv num-filters:<num-filters> filter-shape:<filter-shape> stride:1 padding:same act:relu bias:True <batch-normalization>
+<batch-normalization>   ::= batch-normalization:<boolean>
+<pooling>               ::= layer:pool-max kernel-size:1 stride:<stride> padding:same
+<pre-classification>    ::= <classification> | <classification><classification>
+<classification>        ::= <fully-connected>
+<fully-connected>       ::= layer:fc act:relu num-units:<num-units> bias:True dropout:<boolean>
+<softmax>               ::= layer:fc act:softmax num-units:2 bias:True dropout:False
+<learning>              ::= learning:adam learning-rate:<learning-rate>
+<num-filters>           ::= 6 | 12 | 24 | 32 | 64
+<filter-shape>          ::= 1 | 3 | 5
+<num-units>             ::= 64 | 128 | 256 | 512
+<boolean>               ::= True | False
+<learning-rate>         ::= 0.001 | 0.005 | 0.0001 | 0.00001
+<stride> ::= 1 | 2 | 3

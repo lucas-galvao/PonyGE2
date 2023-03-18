@@ -1,0 +1,15 @@
+GRAMMAR_FILE:           assuncao.pybnf
+FITNESS_FUNCTION:       assuncao
+INITIALISATION:         uniform_genome
+GENERATIONS:            30
+POPULATION_SIZE:        50
+CROSSOVER_PROBABILITY:  0.75
+MUTATION:               int_flip_per_codon
+MUTATION_PROBABILITY:   0.01
+TOURNAMENT_SIZE:        2
+ELITE_SIZE:  		    1
+SELECTION:              nsga2_selection
+REPLACEMENT:            nsga2_replacement
+DATASET_NAME:           mnist
+DATASET_SHAPE:          (28, 28, 1)
+DATASET_CLASSES:        10

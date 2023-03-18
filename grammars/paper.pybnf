@@ -1,0 +1,13 @@
+<FINAL_EXP> ::= <EXP_2><FC>*lr-<LR>
+<EXP_2>     ::= (<EXP_1>*<M>)
+<EXP_1>     ::= (<CONV><POOL>)
+<FC>        ::= fc*<K>*<FCNEURONS>
+<POOL>      ::= pool-<DROPOUT> | ''
+<CONV>      ::= (conv*<N>)<BNORM>
+<DROPOUT>   ::= dropout | ''
+<BNORM>     ::= bnorm- | ''
+<LR>		::= 0.1 | 0.01 | 0.001 | 0.0001
+<FCNEURONS>	::= 64 | 128 | 256 | 512
+<N>         ::= 1 | 2 | 3
+<K>         ::= 0 | 1 | 2
+<M>         ::= 1 | 2 | 3

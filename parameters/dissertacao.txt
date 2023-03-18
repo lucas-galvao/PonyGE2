@@ -1,0 +1,17 @@
+FITNESS_FUNCTION:       dissertacao
+INITIALISATION:         uniform_genome
+GENERATIONS:            30
+POPULATION_SIZE:        50
+CROSSOVER_PROBABILITY:  0.75
+MUTATION:               int_flip_per_codon
+MUTATION_PROBABILITY:   0.01
+TOURNAMENT_SIZE:        2
+ELITE_SIZE:             1
+SELECTION:              nsga2_selection
+REPLACEMENT:            nsga2_replacement
+DATASET_SHAPE:          (28, 28, 3)
+DATASET_CLASSES:        9
+DATASET_NAME:           pathmnist
+GRAMMAR_NAME:           proposal
+GRAMMAR_FILE:           proposal.pybnf
+METRICS_URL:            'https://ffc6-191-6-50-37.ngrok.io'

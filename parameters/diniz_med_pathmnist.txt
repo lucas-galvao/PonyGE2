@@ -1,0 +1,17 @@
+GRAMMAR_FILE:           diniz.pybnf
+FITNESS_FUNCTION:       medmnist_tpu_diniz
+INITIALISATION:         uniform_genome
+GENERATIONS:            30
+POPULATION_SIZE:        50
+CROSSOVER_PROBABILITY:  0.75
+MUTATION:               int_flip_per_codon
+MUTATION_PROBABILITY:   0.01
+TOURNAMENT_SIZE:        2
+ELITE_SIZE:  		    1
+SELECTION:              nsga2_selection
+REPLACEMENT:            nsga2_replacement
+DATASET_NAME:           pathmnist
+DATASET_NUM_CLASSES:    9
+DATASET_NUM_SHAPE:      3
+METRICS_URL:            'https://cecmetrics.herokuapp.com/api/metrics/'
+OLD_METRICS_URL:        'https://papermetrics.herokuapp.com/api/metrics/'

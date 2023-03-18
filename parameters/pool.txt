@@ -1,0 +1,20 @@
+FITNESS_FUNCTION:       pool
+INITIALISATION:         uniform_genome
+GENERATIONS:            30
+POPULATION_SIZE:        50
+CROSSOVER_PROBABILITY:  0.75
+MUTATION:               int_flip_per_codon
+MUTATION_PROBABILITY:   0.01
+TOURNAMENT_SIZE:        2
+ELITE_SIZE:             1
+SELECTION:              nsga2_selection
+REPLACEMENT:            nsga2_replacement
+DATASET_SHAPE:          (32, 32, 3)
+DATASET_CLASSES:        100
+DATASET_NAME:           cifar100
+GRAMMAR_NAME:           diniz
+GRAMMAR_FILE:           diniz.pybnf
+METRICS_URL:            'https://b12b-138-219-241-173.ngrok.io'
+USING_POOL:             True
+SAVE_STATE:             True
+#LOAD_STATE:             '../results/DESKTOP-FRVMAO2_22_1_18_082433_335850_533_335850/state'

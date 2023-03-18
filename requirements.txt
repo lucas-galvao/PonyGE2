@@ -1,0 +1,7 @@
+### Testado no python 3.8.5
+numpy==1.19.3
+scipy
+matplotlib==3.3.4
+pandas==1.2.4
+scikit-learn
+tensorflow==2.2.0

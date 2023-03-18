@@ -1,0 +1,59 @@
+<cnn>                  ::= <features> <classification> <softmax> <learning>
+<features>             ::= <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> |
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> | 
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> <feature> | 
+                           <feature> <feature> <feature> <feature> <feature> <feature> <feature> | 
+                           <feature> <feature> <feature> <feature> <feature> <feature> | 
+                           <feature> <feature> <feature> <feature> <feature> | 
+                           <feature> <feature> <feature> <feature> | 
+                           <feature> <feature> <feature> | 
+                           <feature> <feature> | 
+                           <feature> | 
+<classification>       ::= <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> |
+                           <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> |
+                           <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> |
+                           <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> |
+                           <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> |
+                           <fully_connected> <fully_connected> <fully_connected> <fully_connected> <fully_connected> |
+                           <fully_connected> <fully_connected> <fully_connected> <fully_connected> |
+                           <fully_connected> <fully_connected> <fully_connected> |
+                           <fully_connected> <fully_connected> |
+                           <fully_connected>
+<feature>              ::= <convolution>, | <pooling>,
+<convolution>          ::= layer:conv <num_filters> <filter_shape> <stride> <padding> <activation> <bias> <batch_normalization> <merge_input>
+<batch_normalization>  ::= 1 | 0
+<merge_input>          ::= 1 | 0
+<pooling>              ::= <pool_type> <kernel_size> <stride> <padding>
+<pool_type>            ::= layer:pool-avg | layer:pool-max
+<padding>              ::= same | valid
+<activation>           ::= linear | relu | sigmoid
+<bias>                 ::= 1 | 0
+<fully_connected>      ::= layer:fc <activation> <num_units> <bias>,
+<softmax>              ::= layer:fc softmax,
+<learning>             ::= learning:gradient_descent <lr>
+<num_filters>          ::= 32 | 64 | 128 | 256
+<num_units>            ::= 128 | 256 | 512 | 1024 | 2048
+<filter_shape>         ::= 1 | 2 | 3 | 4 | 5
+<kernel_size>          ::= 1 | 2 | 3 | 4 | 5
+<stride>               ::= 1 | 2 | 3
+<lr>                   ::= 0.0001 | 0.001 | 0.01 | 0.1
